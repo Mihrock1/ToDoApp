@@ -1,6 +1,6 @@
 import React from "react";
 
-const todoItem = ({ todoItem, deletetodoItem }) => {
+const todoItem = ({ todoItem, deleteTodoItem }) => {
 
     return (
         <tr key={todoItem.id}>
@@ -11,12 +11,7 @@ const todoItem = ({ todoItem, deletetodoItem }) => {
             </td>
             <td className="text-right px-6 py-4 whitespace-nowrap font-medium text-sm">
                 <a
-                    // onClick={(e, id) => editEmployee(e, employee.id)}
-                    className="text-indigo-600 hover:text-indigo-800 px-4 hover:cursor-pointer">
-                    Edit
-                </a>
-                <a
-                    onClick={(e, id) => deletetodoItem(e, todoItem.id)}
+                    onClick={(e, id) => deleteTodoItem(e, todoItem.id)}
                     className="text-indigo-600 hover:text-indigo-800 hover:cursor-pointer">
                     Delete
                 </a>

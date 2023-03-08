@@ -32,18 +32,10 @@ public class ToDoController {
 
     @DeleteMapping("/todoItems/{id}")
     public ResponseEntity<Map<String,Boolean>> deleteItem(@PathVariable Integer id) {
-        boolean deleted = false;
-        deleted = toDoService.deleteItem(id);
+        boolean deleted = toDoService.deleteItem(id);
         Map<String,Boolean> response = new HashMap<>();
         response.put("deleted", deleted);
         return ResponseEntity.ok(response);
-    }
-
-    @PutMapping("/todoItems/{id}")
-    public ResponseEntity<ToDoItem> updateEmployee(@PathVariable Integer id,
-                                                   @RequestBody ToDoItem item) {
-        item = toDoService.updateItem(id, item);
-        return ResponseEntity.ok(item);
     }
 
 }

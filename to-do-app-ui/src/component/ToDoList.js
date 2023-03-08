@@ -89,7 +89,7 @@ const ToDoList = () => {
                         {todoItems.map((todoItem) => (
                             <ToDoItem
                                 todoItem={todoItem}
-                                deletetodoItem={deleteToDoItem}
+                                deleteTodoItem={deleteToDoItem}
                                 key={todoItem.id}></ToDoItem>
                         ))}
                         </tbody>

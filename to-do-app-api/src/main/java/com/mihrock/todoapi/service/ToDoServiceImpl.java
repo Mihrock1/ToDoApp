@@ -49,13 +49,4 @@ public class ToDoServiceImpl  implements ToDoService {
         return true;
     }
 
-    @Override
-    public ToDoItem updateItem(Integer id, ToDoItem item) {
-        ToDoItemEntity itemEntity
-                = toDoRepository.findById(id).get();
-        itemEntity.setItem(item.getItem());
-
-        toDoRepository.save(itemEntity);
-        return item;
-    }
 }

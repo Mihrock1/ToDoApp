@@ -11,6 +11,4 @@ public interface ToDoService {
     ToDoItem createToDoItem(ToDoItem item);
 
     boolean deleteItem(Integer id);
-
-    ToDoItem updateItem(Integer id, ToDoItem item);
 }
