@@ -9,4 +9,8 @@ public interface ToDoService {
     List<ToDoItem> fetchAllToDoItems();
 
     ToDoItem createToDoItem(ToDoItem item);
+
+    boolean deleteItem(Integer id);
+
+    ToDoItem updateItem(Integer id, ToDoItem item);
 }

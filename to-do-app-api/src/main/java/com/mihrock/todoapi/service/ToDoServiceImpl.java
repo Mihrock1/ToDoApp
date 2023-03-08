@@ -41,4 +41,21 @@ public class ToDoServiceImpl  implements ToDoService {
 
         return item;
     }
+
+    @Override
+    public boolean deleteItem(Integer id) {
+        ToDoItemEntity item = toDoRepository.findById(id).get();
+        toDoRepository.delete(item);
+        return true;
+    }
+
+    @Override
+    public ToDoItem updateItem(Integer id, ToDoItem item) {
+        ToDoItemEntity itemEntity
+                = toDoRepository.findById(id).get();
+        itemEntity.setItem(item.getItem());
+
+        toDoRepository.save(itemEntity);
+        return item;
+    }
 }
